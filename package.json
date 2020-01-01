@@ -11,6 +11,9 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
+    "start:rewired": "react-app-rewired start",
+    "build:rewired": "react-app-rewired build",
+    "test:rewired": "react-app-rewired test",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "customize-cra": "^0.9.1",
+    "react-app-rewired": "^2.1.5",
+    "svg-sprite-loader": "^4.1.6"
   }
 }
