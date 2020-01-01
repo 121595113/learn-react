@@ -19,6 +19,40 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "config": {
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "build",
+        "ci",
+        "chore",
+        "revert"
+      ],
+      "scope": {
+        "required": false,
+        "allowed": [
+          "*"
+        ],
+        "validate": false,
+        "multiple": false
+      },
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPattern": ".+",
+      "subjectPatternErrorMsg": "subject does not match subject pattern!",
+      "helpMessage": "",
+      "autoFix": false
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -36,7 +70,9 @@
   },
   "devDependencies": {
     "customize-cra": "^0.9.1",
+    "ghooks": "^2.0.4",
     "react-app-rewired": "^2.1.5",
-    "svg-sprite-loader": "^4.1.6"
+    "svg-sprite-loader": "^4.1.6",
+    "validate-commit-msg": "^2.14.0"
   }
 }
